@@ -15,7 +15,7 @@
 		<img src="img/cabecera.jpg" id="imgcab">
 	</div>
 	<div id="botones" class="tab">
-		<button id="btn0" class="tabcont" onClick="openTab(event, 'tab0'); registro(estudiantes)">Registro Estudiantes</button>
+		<button id="btn0" class="tabcont" onClick="openTab(event, 'tab0');">Registro Estudiantes</button>
 		<button id="btn1" class="tabcont" onClick="openTab(event, 'tab1'); mostrarTodo(estudiantes)">Mostrar todo</button>
 		<button id="btn2" class="tabcont" onClick="openTab(event, 'tab2'); promedioTotal(estudiantes)">Promedio total</button>
 		<button id="btn3" class="tabcont" onClick="openTab(event, 'tab3'); mayorNota(estudiantes)">Mayor nota</button>
@@ -40,7 +40,7 @@
 				<td><input type="number" id="not"></td>
 			</tr>
 		</table>
-		<button id="registrar" onClick="guardarJson()">Registrar estudiante</button>
+		<button id="registrar" onClick=	"registro()">Registrar estudiante</button>
 	</div>
 	<div id="tab1" class="tabcontent">
 		<h2>Todos los datos</h2>
@@ -165,6 +165,7 @@
 		var titulo = '<tr>'+'<th>Más alta</th>'+'</tr>'; //Titulo de tabla
 		
 		document.getElementById('c').innerHTML = titulo+'<td>'+max+'</td>';
+		alert('La nota más alta es: '+max);
 	}
 	//función que muestra la nota mayor de la clase
 	function menorNota(json){
@@ -179,9 +180,18 @@
 		var titulo = '<tr>'+'<th>Más baja</th>'+'</tr>'; //Titulo de tabla
 		
 		document.getElementById('d').innerHTML = titulo+'<td>'+min+'</td>';
+		alert('La nota más baja es: '+max);
 	}
 	
 	function registro(json){ //Función que registra a un estudiante nuevo
+		var codigo2 = document.getElementById('cod').value;
+		var nombre2 = document.getElementById('nom').value;
+		var nota2 = document.getElementById('not').value;
+		console.log(estudiantes);
+		
+		estudiantes.estudiantes.push(
+			{código:codigo2, nombre:nombre2, nota:nota2 }
+		);
 		
 	}
 </script>
