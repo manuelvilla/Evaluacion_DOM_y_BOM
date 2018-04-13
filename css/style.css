@@ -1,0 +1,88 @@
+@charset "utf-8";
+body{
+	font-family: 'Roboto';
+}
+/*Div cabecera*/
+#cabecera{
+	height: 400px;
+	width: 100%;
+}
+/*Imagen de cabecera*/
+#imgcab {
+	width: 100%;
+	position: absolute;
+	filter: brightness(0.4);
+	top: -100px;
+	left: 0;
+}
+/*Títulos sobre cabecera*/
+#cabecera h1, #cabecera h4{
+	color: white;
+	text-align: center;
+	position: relative;
+	z-index: 100;
+	top: 150px;
+}
+/*Botones tabs a la izquierda*/
+.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 30%;
+    height: 300px;
+}
+/*Diseño de botones*/
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+/*Over de botones*/
+.tab button:hover{
+	background-color: #ccc;
+}
+/*Botón activo diseño*/
+.tab button.active {
+	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+	color: antiquewhite;
+}
+/*Diseño de contenido desplegable*/
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 66%;
+    border-left: none;
+	min-height: 300px;
+}
+/*Diseño de tabla*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+/*Diseño de contenido de tablas dependientes a id's*/
+#b, #c, #d, #b th, #b td, #c th, #c td, #d th, #d td{
+	width: 40%!important;
+	margin-left: 30%;
+	text-align: center!important;
+}
+/*Diseño columnas y filas*/
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+/*Colorear cada 2 childs de tabla*/
+tr:nth-child(even){background-color: #f2f2f2}
+/*diseño de títulos de tabla*/
+th {
+    background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);;
+    color: white;
+}
