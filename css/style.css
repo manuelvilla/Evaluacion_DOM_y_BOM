@@ -86,3 +86,25 @@ th {
     background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);;
     color: white;
 }
+
+#registrar{
+	border-radius: 5px;
+	font-size: 14px;
+	float: left;
+	font-family: 'Roboto';
+	margin-top: 15px;
+	margin-left: 15px;
+	font-weight: 600;
+}
+
+#registrar:hover{
+	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);;
+    color: black;
+}
+
+input{
+	width: 70%;
+	left: 15%;
+	border-radius: 5px;
+	font-size: 14px;
+}

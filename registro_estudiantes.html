@@ -15,10 +15,32 @@
 		<img src="img/cabecera.jpg" id="imgcab">
 	</div>
 	<div id="botones" class="tab">
+		<button id="btn0" class="tabcont" onClick="openTab(event, 'tab0'); registro(estudiantes)">Registro Estudiantes</button>
 		<button id="btn1" class="tabcont" onClick="openTab(event, 'tab1'); mostrarTodo(estudiantes)">Mostrar todo</button>
 		<button id="btn2" class="tabcont" onClick="openTab(event, 'tab2'); promedioTotal(estudiantes)">Promedio total</button>
 		<button id="btn3" class="tabcont" onClick="openTab(event, 'tab3'); mayorNota(estudiantes)">Mayor nota</button>
 		<button id="btn4" class="tabcont" onClick="openTab(event, 'tab4'); menorNota(estudiantes)">Menor nota</button>
+	</div>
+	<div id="tab0" class="tabcontent">
+		<h2>Formulario de registro</h2>
+		<table id="z">
+			<tr>
+				<th></th>
+				<th>Registra tus datos</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td><label>Código</label></td>
+				<td><label>Nombre</label></td>
+				<td><label>Nota</label></td>
+			</tr>
+			<tr>
+				<td><input type="text" id="cod"></td>
+				<td><input type="text" id="nom"></td>
+				<td><input type="number" id="not"></td>
+			</tr>
+		</table>
+		<button id="registrar" onClick="guardarJson()">Registrar estudiante</button>
 	</div>
 	<div id="tab1" class="tabcontent">
 		<h2>Todos los datos</h2>
@@ -53,7 +75,7 @@
 		event.currentTarget.className += ' active';
 	}
 	
-	document.getElementById('btn1').click(); //Botón activo por defecto
+	document.getElementById('btn0').click(); //Botón activo por defecto
 	
 	/* Estructura de Datos de estudiantes JSON*/
 	var estudiantes = {"estudiantes":[
@@ -157,6 +179,10 @@
 		var titulo = '<tr>'+'<th>Más baja</th>'+'</tr>'; //Titulo de tabla
 		
 		document.getElementById('d').innerHTML = titulo+'<td>'+min+'</td>';
+	}
+	
+	function registro(json){ //Función que registra a un estudiante nuevo
+		
 	}
 </script>
 </html>
