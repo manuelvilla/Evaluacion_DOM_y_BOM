@@ -151,8 +151,7 @@
 		var titulo = '<tr>'+'<th>Total</th>'+'</tr>'; //Titulo de tabla
 		
 		document.getElementById('b').innerHTML = titulo+'<td>'+num.toPrecision(4)+'</td>'; //Titulo de tabla + contenido num con 4 dígitos
-		num = num.toPrecision(4);
-		alert('El promedio de notas es: '+num);
+		alert('El promedio de notas es: '+num.toPrecision(4));
 	}
 	//función que muestra la nota mayor de la clase
 	function mayorNota(json){
@@ -191,7 +190,7 @@
 		var nota2 = document.getElementById('not').value; //Obtención de valores en inputs
 		
 		estudiantes.estudiantes.push(
-			{código:codigo2, nombre:nombre2, nota:nota2 }
+			{código:codigo2, nombre:nombre2, nota:parseInt(nota2)}
 		); //Agregar los valores digitados por el estudiante al JSON existente
 		
 		alert('El registro ha sido exitoso');
