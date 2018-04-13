@@ -35,12 +35,12 @@
 				<td><label>Nota</label></td>
 			</tr>
 			<tr>
-				<td><input type="text" id="cod"></td>
-				<td><input type="text" id="nom"></td>
-				<td><input type="number" id="not"></td>
+				<td><input type="text" id="cod" minlength="9" required></td>
+				<td><input type="text" id="nom" required></td>
+				<td><input type="number" id="not" max="10" required></td>
 			</tr>
 		</table>
-		<button id="registrar" onClick=	"registro()">Registrar estudiante</button>
+		<button type="submit" id="registrar" onClick="registro()">Registrar estudiante</button>
 	</div>
 	<div id="tab1" class="tabcontent">
 		<h2>Todos los datos</h2>
@@ -151,6 +151,7 @@
 		var titulo = '<tr>'+'<th>Total</th>'+'</tr>'; //Titulo de tabla
 		
 		document.getElementById('b').innerHTML = titulo+'<td>'+num.toPrecision(4)+'</td>'; //Titulo de tabla + contenido num con 4 dígitos
+		alert('El promedio de notas es: '+num.toPrecision(4));
 	}
 	//función que muestra la nota mayor de la clase
 	function mayorNota(json){
@@ -186,12 +187,13 @@
 	function registro(json){ //Función que registra a un estudiante nuevo
 		var codigo2 = document.getElementById('cod').value;
 		var nombre2 = document.getElementById('nom').value;
-		var nota2 = document.getElementById('not').value;
-		console.log(estudiantes);
+		var nota2 = document.getElementById('not').value; //Obtención de valores en inputs
 		
 		estudiantes.estudiantes.push(
 			{código:codigo2, nombre:nombre2, nota:nota2 }
-		);
+		); //Agregar los valores digitados por el estudiante al JSON existente
+		
+		alert('El registro ha sido exitoso');
 		
 	}
 </script>
